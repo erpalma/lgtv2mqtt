@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const Mqtt = require('mqtt')
+//const Mqtt = require('mqtt')
 const Lgtv = require('lgtv2')
 const pkg = require('./package.json')
 const _ = require('lodash')
@@ -14,7 +14,7 @@ let tvConnected
 let lastError
 let foregroundApp = null
 
-require('homeautomation-js-lib/mqtt_helpers.js')
+const Mqtt = require('homeautomation-js-lib/mqtt_helpers.js')
 
 const tvMAC = process.env.TV_MAC
 const tvIP = process.env.TV_IP
